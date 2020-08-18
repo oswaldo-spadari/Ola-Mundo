@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá Mundo JavaScript</title>
+    <style>
+        body{
+            font: normal 16pt Arial;
+            color: rgb(49, 109, 177);
+        }
+        div{
+            background-color: black;
+            color: rgb(160, 160, 21);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--<h1>Olá Mundo!</h1>
+    <p>Olá mundo para JavaScript</p>-->
+    <div id = area>
+        Clique aqui!
+    </div>
+    <script>
+        /*window.alert('Olá Mundo em JS!')*/
+        var a = window.document.getElementById('area')
+        /*cria uma variavel para o elemento div em body de id area*/
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.innerText = 'Olá mundo em JS'
+        }
+        function entrar(){
+            a.innerText = 'Olá Mundo JavaScript'
+        }
+        function sair(){
+            a.innerText = 'Clique aqui!'
+        }
+
+    </script>
+</body>
+</html>
